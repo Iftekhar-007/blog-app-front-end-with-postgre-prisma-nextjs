@@ -1,6 +1,6 @@
 "use client";
 
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import { Menu } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -27,6 +27,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import { ModeToggle } from "../togglebutton/ModeToggle";
 
 interface MenuItem {
   title: string;
@@ -122,6 +123,8 @@ const Navbar1 = ({
             <Button asChild size="sm">
               <Link href={auth.signup.url}>{auth.signup.title}</Link>
             </Button>
+
+            <ModeToggle></ModeToggle>
           </div>
         </nav>
 
@@ -170,6 +173,8 @@ const Navbar1 = ({
                     <Button asChild>
                       <Link href={auth.signup.url}>{auth.signup.title}</Link>
                     </Button>
+
+                    <ModeToggle></ModeToggle>
                   </div>
                 </div>
               </SheetContent>
